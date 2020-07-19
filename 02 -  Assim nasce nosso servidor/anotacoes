@@ -1,0 +1,43 @@
+Express JS:
+
+npm init:
+
+package.json: 
+A) Pode ou não ser criado através do terminal pelo comando npm init.
+
+B) Guarda as dependências de produção e desenvolvimento.
+
+C) Seu uso é opcional em um projeto Node.
+
+D) Sua estrutura nada mais é que uma estrutura JSON
+
+Com base nas afirmativas acima, podemos dizer que:
+
+npm install express@4.13.3 --save
+
+_________________________________________________________________________
+
+node server / node server.js -> rodar com o node
+
+após o comando npm init e com o package.json configurado, podemos rodas a aplicação com: npm start.
+
+
+
+-> PEGAR INFORMACOES PARA SUBIR O CALCULADORA COM ANGULARJS.
+
+node_modules:
+
+require no Java Script
+
+module.exports
+
+
+____________________________________________________________
+
+A) O módulo Express não vem por padrão com o Node.js e deve ser baixado pelo gerenciador de pacotes do Node, o npm.
+
+B) Instalamos o Express no terminal com o comando npm install express ou npm install express --save.
+
+C) O Express nada mais é do que um módulo que aplica uma série de middlewares que processam nossas requisições.
+
+D) O Express é um framework web criado por TJ Hollowaychuck, uma lenda da comunidade open source. Mesmo tão novo na época do lançamento do Express, contribuiu muito mais do que muito programador sexagenário para o mundo open source.
