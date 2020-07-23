@@ -1,0 +1,17 @@
+Configurando requisições no Express:
+
+exemplo de GET
+app.get('/v1/fotos',function (req,res){
+
+    res.end('Você esta querendo uma lista de foto ?');
+
+
+});
+
+POST: criar novo recurso
+
+PUT: atualizar recurso
+
+GET: obter recurso
+
+DELETE: apagar recurso
