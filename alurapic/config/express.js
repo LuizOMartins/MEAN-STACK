@@ -6,7 +6,10 @@ var consign =  require('consign');
 app.use(express.static('./public'));
 
 
-consign().include('app/routes').into(app);
+consign( {cwd: 'app'})
+    .include('api')
+    .then('routes')
+    .into(app);
 
 // require('../app/routes/fotos')(app);
 // require('../app/routes/grupo')(app);

@@ -2,3 +2,4 @@ npm install consign@0.1.2 --save
 -> com -- save ja insere no package.json
 -> modeulo para importar os arquivos automaticamente.
 
+carregando modulos com consing.
