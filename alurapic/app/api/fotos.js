@@ -26,4 +26,17 @@ api.buscaPorId =  function(req, res){
 };
 
 
+api.removePorId =  function(req, res){
+
+    fotos = fotos.filter(function(foto){
+        return foto._id != req.params.id;
+    });
+
+
+    res.sendStatus(204);
+    
+
+};
+
+
 module.exports = api;
