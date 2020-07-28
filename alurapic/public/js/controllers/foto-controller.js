@@ -24,7 +24,7 @@ $scope.submeter = function (){
 				
 			})
 			.catch(function(dados){
-				$scope.mensagem =  daods.mensagem;
+				$scope.mensagem =  dados.mensagem;
 			});	
 	}
 };
