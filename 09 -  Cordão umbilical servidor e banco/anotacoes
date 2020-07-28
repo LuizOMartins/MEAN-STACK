@@ -1,0 +1,7 @@
+Mongo: 
+
+Banco orientado a documento.
+
+
+instalação do mongo: 4.2.8 2008R2 Plus SSl
+npm install mongoose@4.3.1 --save
