@@ -40,3 +40,30 @@ WriteResult({ "nInserted" : 1 })
 > db.fotos.find();
 { "_id" : ObjectId("5f2721bc47533774809ba920"), "titulo" : "Leao", "url" : "" }
 { "_id" : ObjectId("5f27228947533774809ba921"), "titulo" : "Leao 3" }
+
+
+
+_____________________________________________
+
+
+Node:  quando tem mais de um require do mesmo modulo o Node nao importa duas vezes, ele usa o que 
+já foi carregado.
+
+
+O MongoDB trabalha com o conceito de documento:
+
+A) Um documento é uma estrutura muito semelhante ao JSON, com a diferença de que possui mais tipos.
+
+B) Para agrupar documentos, é utilizado coleções (collections), que são análogas as tabelas de um banco de dados relacional.
+
+C) Dentro de uma collection, podemos salvar documentos com estrutura diferentes.
+
+D) Documentos são gravados na estrutura BSON
+
+Mongoose trabalha com schemas e modelos:
+
+B) Compilamos modelos a partir de esquemas e usamos esses modelos para interagirmos 
+efetivamente com o banco.
+
+C) Quando compilamos um modelo fornecendo seu nome, o Mongoose adotará por padrão 
+como nome da collection o nome do modelo no plural.
