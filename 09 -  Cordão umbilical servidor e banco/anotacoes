@@ -5,3 +5,39 @@ Banco orientado a documento.
 
 instalação do mongo: 4.2.8 2008R2 Plus SSl
 npm install mongoose@4.3.1 --save
+
+_____________________________________________
+
+
+adicionar mongo no path p/ usar no CMD: C:\Program Files\MongoDB\Server\4.2\bin
+
+
+_____________________________________________
+
+Passando parametro para o modulo
+
+database.js
+-> module.exports = function (uri) { codigo dentro }
+
+->server.js
+require('./config/database')('localhost/alurapic');
+
+
+_____________________________________________
+
+
+Menor impedância
+Conseguimos fazer a comunicação da nossa aplicação Angular com nosso server. 
+Durante esta comunicação, tanto um quanto outro enviam e recebem dados. 
+Um ponto curioso a se destacar é que trafegamos a estrutura de dados JSON.
+ Essa estrutura tão difundida no mundo Javascript é de fácil manipulação, 
+ inclusive tanto nosso servidor quando nosso cliente Angular sabem transformar esse formato 
+ textual em objetos que podem ser manipulados.
+
+Sabemos que precisamos ainda implementar a persistência dos nossos dados, 
+porque a cada reinicio do servidor perdemos nossas modificações. 
+A pergunta que lhe faço é a seguinte: qual banco utilizaremos? 
+A escolha de um banco de dados não é uma questão de gosto, 
+mas envolve decisões arquiteturais que nem sempre são triviais. 
+A boa notícia é que não precisaremos meditar muito para escolhermos o nosso banco, 
+pois no acrônimo MEAN o M significa MongoDB.
