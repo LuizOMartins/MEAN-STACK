@@ -1,0 +1,42 @@
+NO mongoDB, não é manupulado tabelas,e sim Documentos.
+
+-> mongo
+-> show dbs
+-> use alurapic
+-> db  >  mostra o banco atual
+
+var foto =  { titulo = "Leao", url : "" }
+
+**Todos documentos inserido em Collection, o mongo gera um ID automático.
+**MongoDB não faz validações em tidos de dados.
+
+Comandos:
+
+> use alurapic
+switched to db alurapic
+> db
+alurapic
+> var foto  =  { "titulo":"Leao", "url":"" }
+> foto
+{ "titulo" : "Leao", "url" : "" }
+> db.fotos.insert(foto);
+WriteResult({ "nInserted" : 1 })
+> show collections
+fotos
+> db.find({});
+2020-08-02T17:28:41.711-0300 E  QUERY    [js] uncaught exception: TypeError: db.find is not a function :
+@(shell):1:1
+> db.fotos.find({});
+{ "_id" : ObjectId("5f2721bc47533774809ba920"), "titulo" : "Leao", "url" : "" }
+> var foto2 =  {titulo: 'Leao 3'};
+> db.fotos.insert(foto2);
+WriteResult({ "nInserted" : 1 })
+> do.fotos.find();
+2020-08-02T17:31:24.663-0300 E  QUERY    [js] uncaught exception: SyntaxError: expected expression, got '.' :
+@(shell):1:2
+> do.fotos.find({});
+2020-08-02T17:31:56.151-0300 E  QUERY    [js] uncaught exception: SyntaxError: expected expression, got '.' :
+@(shell):1:2
+> db.fotos.find();
+{ "_id" : ObjectId("5f2721bc47533774809ba920"), "titulo" : "Leao", "url" : "" }
+{ "_id" : ObjectId("5f27228947533774809ba921"), "titulo" : "Leao 3" }
