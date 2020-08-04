@@ -2,3 +2,28 @@ Autenticação de usuários.
 
 JWT : Json Web Token.
 
+A aplicação Angular:  Guarda a o token para ser utilizado a cada requisição.
+app.use: qualquer verbo HTTP
+
+____________________________________
+ npm install jsonwebtoken@5.4.1  --save
+
+
+-> Função de call-back / essa function 
+jwt.verify(token, app.get('secret'), function(err, decoded){
+
+});
+
+
+____________________________________
+
+Fluxo no processo de login:
+efetua o login
+criar token
+enviou no header de response
+
+ >aplicação Angular joga para o Home
+
+buscar no banco:
+
+--Aula de  14.

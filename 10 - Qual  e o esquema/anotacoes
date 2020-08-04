@@ -41,6 +41,7 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5f2721bc47533774809ba920"), "titulo" : "Leao", "url" : "" }
 { "_id" : ObjectId("5f27228947533774809ba921"), "titulo" : "Leao 3" }
 
+collections:  usuarios
 
 
 _____________________________________________
