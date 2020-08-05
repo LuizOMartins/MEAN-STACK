@@ -1,6 +1,8 @@
-angular.module('alurapic', ['minhasDiretivas','ngAnimate','ngRoute','meusServicos']).config(function($routeProvider, $locationProvider){
+angular.module('alurapic', ['minhasDiretivas','ngAnimate','ngRoute','meusServicos']).config(function($routeProvider, $locationProvider, $httpProvider){
     
    // $locationProvider.html5Mode(true);
+
+   $httpProvider.interceptors.push('tokenInterceptor');
 
     $routeProvider.when('/fotos',{
         templateUrl:'partials/principal.html',

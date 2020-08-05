@@ -18,12 +18,30 @@ jwt.verify(token, app.get('secret'), function(err, decoded){
 ____________________________________
 
 Fluxo no processo de login:
-efetua o login
-criar token
-enviou no header de response
 
- >aplicação Angular joga para o Home
+Efetua o login
+Criar token
+Enviou no header de response
 
-buscar no banco:
+-> Aplicação Angular joga para o Home:
 
---Aula de  14.
+O Serviço tokenInterceptor:
+->pega o token no reponso e salve no sessionsStorage.
+-> em request: pega o token de sessionsStorage.  
+
+-> criar um deslogar: delete $window.sessionStorage.token;
+ 
+sessionsStorage:ate a aba ser fechada.
+
+
+localStorage: mesmo fechando o navegador o dado continua la.
+____________________________________
+
+
+criando um interceptador no AngularJS.
+registrando interceptor:  
+   $httpProvider.interceptors.push('tokenInterceptor');
+
+$httpProvider: interage com o http.
+
+window:  vai dar acesso ao Window do navegador.
