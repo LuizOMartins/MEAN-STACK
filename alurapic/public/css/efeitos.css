@@ -22,3 +22,21 @@ body .input-group,
 body h1 {
     margin-bottom: 40px;
 }
+
+
+.content-login{
+    display: flex;
+}
+
+.content-login  div {
+    display: block;
+    margin: 0 auto;
+}
+
+.content-login  div  input.btn.btn-primary{
+    margin-top: 10px;
+}
+
+.tittleHome h1 {
+    font-size: 50px;
+}

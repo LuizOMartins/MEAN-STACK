@@ -1,74 +1,43 @@
+angular.module('minhasDiretivas', [])
+	.directive('meuPainel', function() {
 
-angular.module('minhasDiretivas',[])
-.directive('meuPainel',DmeuPainel)
-.directive('minhaFoto',DminhaFoto)
-.directive('meuBotaoPerigo',DmeuBotaoPerigo)
-.directive('meuFocus',DmeuFocus);
+		var ddo = {};
 
-function DmeuFocus(){
-    var ddo = {};
-    ddo.restric = "A";
+		ddo.restrict = "AE";
+        ddo.transclude = true;
 
 
-    ddo.link =  function(scope, element){
-        scope.$on('fotoCadastrada',function(){
-            element[0].focus();
-        });
- 
-        // scope.$watch('focado',function(){
-        //     if(scope.focado){
-        //       element[0].focus();
-        //       scope.focado = false;
-        //     }
-        // });
-    };
+		ddo.scope = {
+            titulo: '@'
+        };
 
-    return ddo;
-}
+        ddo.templateUrl = 'js/directives/meu-painel.html';
 
+		return ddo;
+	})
+    .directive('minhaFoto', function() {
 
+        var ddo = {};
 
-function DmeuPainel(){
-    var ddo = {};
-    ddo.restric = "AE";
-    // A - atributo
-    // E - element
+        ddo.restrict = "AE";
 
-    ddo.transclude = true;
-    ddo.scope = {
-        titulo: '@'
-    };
-    ddo.templateUrl = 'js/directives/meu-painel.html';
-    return ddo;
-}
+        ddo.scope = {
+            titulo: '@',
+            url: '@'
+        };
 
-function DminhaFoto(){
-    var ddo = {};
-    ddo.restric = "AE";
-    // A - atributo
-    // E - element
+        ddo.template = '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';           
+        
+        return ddo;
+    })
+    .directive('meuBotaoPerigo', function() {
+        var ddo = {};
+        ddo.restrict = "E";
+        ddo.scope = {
+            nome: '@',
+            acao : '&'
+        }
+        ddo.template = '<button class="btn btn-danger btn-block" ng-click="acao()">{{nome}}</button>';
 
-    ddo.transclude = true;
-    ddo.scope = {
-        url: '@',
-        titulo: '@'
-    };
-    ddo.template = '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';
-
-    return ddo;
-}
-
-
-function DmeuBotaoPerigo (){
-    var ddo =  {};
-
-    ddo.restric = "E";
-    ddo.scope =  {
-        nome: '@',
-        acao: '&'
-    };
-
-    ddo.template = '<button ng-click="acao(foto)" class="btn btn-danger btn-block">{{nome}}</button>';
-
-    return ddo;
-}
+        return ddo;
+    });

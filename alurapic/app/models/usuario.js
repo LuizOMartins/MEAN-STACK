@@ -1,17 +1,15 @@
+var mongoose = require('mongoose');
 
-var mongoose =  require('mongoose');
-
-var shcema =  mongoose.Schema({
+var schema = mongoose.Schema({
 
     login: {
-        type:  String,
-        required: true,
-
+        type: String, 
+        required: true
     },
     senha: {
         type: String,
         required: true
-     }
+    }
 });
 
-mongoose.model('Usuario', shcema);
+mongoose.model('Usuario', schema);

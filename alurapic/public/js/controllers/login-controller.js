@@ -1,20 +1,18 @@
-angular.module('alurapic')
-.controller('LoginController', function LoginController($scope, $http, $location) { 
+angular.module('alurapic').controller('LoginController', function($scope, $http, $location) {
 
     $scope.usuario = {};
     $scope.mensagem = '';
 
-    $scope.autenticar = function(){
-        var usuario =  $scope.usuario;
-        console.log(usuario);
-        $http.post('/autenticar',{login: usuario.login, senha: usuario.senha })
-        .then(function(){
+    $scope.autenticar = function() {
+
+        var usuario = $scope.usuario;
+
+        $http.post('/autenticar', {login: usuario.login, senha: usuario.senha})
+        .then(function() {
             $location.path('/');
-        },function(error){
-            console.log(error);
+        }, function(erro) {
             $scope.usuario = {};
-            $scope.mensagem = 'Login ou senha invalidos';
+            $scope.mensagem = 'Login/Senha incorretos';
         });
     };
-
 });

@@ -1,32 +1,33 @@
-<div >
-    <h1 class="text-center">Inventário de Produtos</h1>
+<div class="tittleHome">
+	<h1 class="text-center">Produtos</h1>
 </div>
 
+<p ng-show="mensagem.length" class="alert alert-info">
+	{{mensagem}}
+</p>
 
-<p class="alert alert-info" ng-show="mensagem.length" >{{mensagem}}</p>
 <div class="row">
-    <div class="col-md-12">
-        <form >
-
-            <div class="input-group">
-                
-                <span class="input-group-btn">
-                    <a href="fotos/new" class="btn btn-primary">Nova Foto</a>
-                </span>
-                
-
-                <input  ng-model="filtro" ng-model-options= "{debounce: 500}"class="form-control" placeholder="filtrar">
-            </div>
-
-        </form>
-    </div>
+	<div class="col-md-12">
+		<form>
+			<div class="input-group">
+				<span class="input-group-btn">
+					<a href="/#/fotos/new" class="btn btn-primary" type="button">
+						Nova foto
+					</a>
+				</span>
+				<input class="form-control" placeholder="filtrar pelo título da foto" 
+					ng-model="filtro" ng-model-options="{ debounce: 500 }">
+		</form>
+	</div> <!-- fim col-md-12 -->
 </div> <!-- fim row -->
 
 <div class="row">
- <meu-painel  class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter:filtro" titulo="{{foto.titulo}}">
-        <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
-        <a href="fotos/edit/{{foto._id}}" class="btn btn-primary btn-block">Editar</a>
-        <meu-botao-perigo nome="Remover" acao="remover(foto)"></meu-botao-perigo>
-</meu-painel>  <!-- fim do panel -->      
+    <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
+        <minha-foto url="{{foto.url}}" alt="{{foto.titulo}}"></minha-foto>
 
+		<a class="btn btn-primary btn-block" href="/#/fotos/edit/{{foto._id}}">
+			Editar
+		</a>
+		<meu-botao-perigo nome="Remover" acao="remover(foto)">Remover</meu-botao-perigo>
+    </meu-painel>
 </div>
