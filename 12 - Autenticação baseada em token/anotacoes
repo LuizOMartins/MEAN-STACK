@@ -45,3 +45,14 @@ registrando interceptor:
 $httpProvider: interage com o http.
 
 window:  vai dar acesso ao Window do navegador.
+
+
+____________________________________
+
+Por que Angular tem # na URL ?
+Referência: https://docs.angularjs.org/guide/$location
+
+
+
+
+
