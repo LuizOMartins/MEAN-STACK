@@ -56,3 +56,5 @@ Referência: https://docs.angularjs.org/guide/$location
 
 
 
+O $locationserviço analisa o URL na barra de endereço do navegador (com base em ) e disponibiliza o URL para seu aplicativo.
+
