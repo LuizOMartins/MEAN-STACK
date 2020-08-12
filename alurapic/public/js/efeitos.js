@@ -10,3 +10,8 @@ function openNav() {
   }
 
   
+  //   if( $location.path('/login')){
+  //     document.getElementById("menu").style.display = "none";
+  // }else{
+  //     document.getElementById("menu").style.display = "block";
+  // }

@@ -89,3 +89,11 @@ body h1 {
     width: 100%;
     transition: 0.5s;
   }
+
+  span#menu {
+    margin: 40px;
+}
+
+#menu{
+  display: inline-block ; 
+}

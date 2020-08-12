@@ -4,6 +4,7 @@ angular.module('alurapic')
         var interceptor = {};
 
         interceptor.request = function(config) {
+
             // enviar o token na requisição
             config.headers = config.headers || {};
             if ($window.sessionStorage.token) {
@@ -32,5 +33,4 @@ angular.module('alurapic')
         }
 
     return interceptor;
-
 });
