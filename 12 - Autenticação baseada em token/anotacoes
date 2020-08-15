@@ -1,20 +1,14 @@
 Autenticação de usuários.
-
 JWT : Json Web Token.
-
 A aplicação Angular:  Guarda a o token para ser utilizado a cada requisição.
 app.use: qualquer verbo HTTP
-
 ____________________________________
- npm install jsonwebtoken@5.4.1  --save
-
+npm install jsonwebtoken@5.4.1  --save
 
 -> Função de call-back / essa function 
 jwt.verify(token, app.get('secret'), function(err, decoded){
 
 });
-
-
 ____________________________________
 
 Fluxo no processo de login:
@@ -52,9 +46,23 @@ ____________________________________
 Por que Angular tem # na URL ?
 Referência: https://docs.angularjs.org/guide/$location
 
-
-
-
-
 O $locationserviço analisa o URL na barra de endereço do navegador (com base em ) e disponibiliza o URL para seu aplicativo.
 
+____________________________________
+
+
+Ideias: 
+
+-> Logout.
+-> Grupos de Hero vir a partir do Banco.
+->  Documentação para entender o projeto.
+-> Tela cadastrar usuários. (somente quem for ADM).
+-> Criptografar a senha no banco.
+-> Login com ID.
+-> Alterar URL de Foto por Foto mesmo.
+->  Transação nas telas.
+-> Tela de configuração ( onde pode ser possível cadastrar os itens do comboBox {somente quem for ADM})
+-> Interceptor pegar transações via API Sping.
+-> Dashboard de poder de habidade de Heroi (a pesquisar ).
+->  Personalizar cadastro de Heroi:
+-->  Quais campos terão.
