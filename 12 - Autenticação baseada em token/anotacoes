@@ -13,22 +13,33 @@ ____________________________________
 
 Fluxo no processo de login:
 
-Efetua o login
-Criar token
-Enviou no header de response
+Efetua o login: 
+-- Backend autentica e envia token no reponse pelo header: x-access-token
 
 -> Aplicação Angular joga para o Home:
 
 O Serviço tokenInterceptor:
 ->pega o token no reponso e salve no sessionsStorage.
--> em request: pega o token de sessionsStorage.  
+-> em cada  request: pega o token de sessionsStorage.  
 
 -> criar um deslogar: delete $window.sessionStorage.token;
  
 sessionsStorage:ate a aba ser fechada.
-
-
 localStorage: mesmo fechando o navegador o dado continua la.
+
+
+No file routes/auth.js:
+
+app.use('/*', api.verificaToken);
+-> qualquer Requisição irá ser verificada.
+
+-> A aplicação front-end irá  fazer essa validação pelo Intereceptor.
+
+No file api/auth.js:
+
+api.verificaToken = function(req, res, next) {
+--> o Next é pois a partir de qualquer endpoint após ser feito a validação, 
+informa ao express que poderá seguir.
 ____________________________________
 
 
@@ -66,3 +77,4 @@ Ideias:
 -> Dashboard de poder de habidade de Heroi (a pesquisar ).
 ->  Personalizar cadastro de Heroi:
 -->  Quais campos terão.
+-> Passar o manu para uma diretiva personalizada.
