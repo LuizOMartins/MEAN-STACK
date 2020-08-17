@@ -22,8 +22,6 @@ O Serviço tokenInterceptor:
 ->pega o token no reponso e salve no sessionsStorage.
 -> em cada  request: pega o token de sessionsStorage.  
 
--> criar um deslogar: delete $window.sessionStorage.token;
- 
 sessionsStorage:ate a aba ser fechada.
 localStorage: mesmo fechando o navegador o dado continua la.
 
@@ -60,21 +58,3 @@ Referência: https://docs.angularjs.org/guide/$location
 O $locationserviço analisa o URL na barra de endereço do navegador (com base em ) e disponibiliza o URL para seu aplicativo.
 
 ____________________________________
-
-
-Ideias: 
-
--> Logout.
--> Grupos de Hero vir a partir do Banco.
-->  Documentação para entender o projeto.
--> Tela cadastrar usuários. (somente quem for ADM).
--> Criptografar a senha no banco.
--> Login com ID.
--> Alterar URL de Foto por Foto mesmo.
-->  Transação nas telas.
--> Tela de configuração ( onde pode ser possível cadastrar os itens do comboBox {somente quem for ADM})
--> Interceptor pegar transações via API Sping.
--> Dashboard de poder de habidade de Heroi (a pesquisar ).
-->  Personalizar cadastro de Heroi:
--->  Quais campos terão.
--> Passar o manu para uma diretiva personalizada.

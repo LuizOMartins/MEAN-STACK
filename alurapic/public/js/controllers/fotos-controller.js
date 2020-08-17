@@ -12,7 +12,7 @@ angular.module('alurapic').controller('FotosController', function($scope, recurs
 
 	$scope.remover = function(foto) {
 
-		recursoFoto.delete({fotoId: foto._id}, function() {
+		recursoFoto.delete({fotoId: foto._id}, function() { // delete a foto e uma função de call back para remove da View
 			var indiceDaFoto = $scope.fotos.indexOf(foto);
 			$scope.fotos.splice(indiceDaFoto, 1);
 			$scope.mensagem = 'Foto ' + foto.titulo + ' removida com sucesso!';
